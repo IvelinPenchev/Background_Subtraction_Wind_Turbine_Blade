@@ -1,0 +1,143 @@
+﻿  BackgroundSubtraction.cpp
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(5): error C2653: 'cv': is not a class or namespace name
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(5): error C2146: syntax error: missing ')' before identifier 'imageDestination'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(5): error C3646: 'imageDestination': unknown override specifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(5): error C2059: syntax error: ')'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(6): error C3646: 'subtractedBackground': unknown override specifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(10): error C3646: 'image_': unknown override specifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(11): error C3646: 'processed_': unknown override specifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(12): error C3646: 'canny_': unknown override specifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(13): error C3646: 'edges_': unknown override specifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(16): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(16): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(17): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(17): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(18): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(18): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(22): error C3646: 'color_': unknown override specifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(22): error C2059: syntax error: '='
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(22): error C2238: unexpected token(s) preceding ';'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(28): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(28): error C2238: unexpected token(s) preceding ';'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(34): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(34): error C2238: unexpected token(s) preceding ';'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(35): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(35): error C2238: unexpected token(s) preceding ';'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(38): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(38): error C2238: unexpected token(s) preceding ';'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(39): error C2143: syntax error: missing ';' before '<'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(39): error C2238: unexpected token(s) preceding ';'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(16): error C2511: 'void BackgroundSubtractor::background_subtraction(const cv::String)': overloaded member function not found in 'BackgroundSubtractor'
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(2): note: see declaration of 'BackgroundSubtractor'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(18): error C2065: 'image_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(19): error C2597: illegal reference to non-static member 'BackgroundSubtractor::leftContourIndex_'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(20): error C2597: illegal reference to non-static member 'BackgroundSubtractor::rightContourIndex_'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(21): error C2597: illegal reference to non-static member 'BackgroundSubtractor::twoGoodLines_'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(22): error C2597: illegal reference to non-static member 'BackgroundSubtractor::lineLeft_'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(23): error C2597: illegal reference to non-static member 'BackgroundSubtractor::lineRight_'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(24): error C2597: illegal reference to non-static member 'BackgroundSubtractor::isBladeDefined_'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(26): error C2065: 'median_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(26): error C2228: left of '.size' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(26): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(27): error C2352: 'BackgroundSubtractor::image_process': illegal call of non-static member function
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(46): note: see declaration of 'BackgroundSubtractor::image_process'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(28): error C2352: 'BackgroundSubtractor::contour_finder': illegal call of non-static member function
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(47): note: see declaration of 'BackgroundSubtractor::contour_finder'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(29): error C2352: 'BackgroundSubtractor::contour_drawer': illegal call of non-static member function
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(48): note: see declaration of 'BackgroundSubtractor::contour_drawer'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(30): error C2352: 'BackgroundSubtractor::blade_detector': illegal call of non-static member function
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(49): note: see declaration of 'BackgroundSubtractor::blade_detector'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(31): error C2352: 'BackgroundSubtractor::blade_decision_maker': illegal call of non-static member function
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(50): note: see declaration of 'BackgroundSubtractor::blade_decision_maker'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(32): error C2352: 'BackgroundSubtractor::blade_drawer': illegal call of non-static member function
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.h(51): note: see declaration of 'BackgroundSubtractor::blade_drawer'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(33): error C2065: 'subtractedBackground': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(39): error C2065: 'image_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(39): error C2228: left of '.convertTo' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(39): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(39): error C2065: 'processed_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(39): error C2065: 'contrast_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(39): error C2065: 'brightness_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(40): error C2065: 'processed_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(42): error C2065: 'processed_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(42): error C2065: 'median_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(44): error C2065: 'processed_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(44): error C2065: 'canny_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(50): error C2065: 'canny_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(50): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(50): error C2065: 'hierarchy_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(52): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(52): error C2065: 'canny_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(52): error C2228: left of '.size' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(52): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(59): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(59): error C2228: left of '.size' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(59): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(61): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(65): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(70): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(78): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(79): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(81): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(81): error C2228: left of '.x' must have class/struct/union
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(82): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(82): error C2228: left of '.x' must have class/struct/union
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(85): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(85): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(85): error C2065: 'color_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(85): error C2065: 'hierarchy_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(86): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(86): error C2228: left of '.cols' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(86): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(87): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(87): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(87): error C2065: 'color_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(87): error C2065: 'hierarchy_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(91): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(92): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(99): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(99): error C2228: left of '.cols' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(99): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(102): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(102): error C2228: left of '.cols' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(102): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(111): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(111): error C2228: left of '.at' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(111): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(115): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(115): error C2228: left of '.at' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(115): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(119): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(119): error C2228: left of '.at' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(119): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(119): error C2228: left of '.rows' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(119): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(123): error C2065: 'edges_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(123): error C2228: left of '.at' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(123): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(123): error C2228: left of '.rows' must have class/struct/union
+  c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(123): note: type is 'unknown-type'
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(134): error C2065: 'leftContours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(134): error C2065: 'contours_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(135): error C2065: 'leftHierarchy_': undeclared identifier
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(135): fatal error C1003: error count exceeds 100; stopping compilation
+  SubtractBackground.cpp
+c:\users\ivo\source\repos\backgroundsubtraction\backgroundsubtraction\subtractbackground.cpp(12): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Generating Code...

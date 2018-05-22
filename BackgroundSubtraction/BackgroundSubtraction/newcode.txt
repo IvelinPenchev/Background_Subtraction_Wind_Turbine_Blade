@@ -1,0 +1,201 @@
+#include "stdafx.h"
+#include <iostream>
+#include "opencv2\highgui\highgui.hpp"
+#include "opencv\cv.h"
+#include "opencv2/core/core.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+//#include <sstream>
+
+
+using namespace cv;
+using namespace std;
+int main()
+{
+
+	Mat image;
+	image = imread("Small blade//3.JPG", 1);
+	cv::imwrite("Original.jpg", image);
+
+
+
+	int median[2]{ 95, 95 };
+	int	brightness[2]{50, -150};
+	double contrast[2]{ 1.8, 1.8};
+
+	Scalar color = Scalar(255, 255, 255);
+	bool is_left_defined = false;
+	bool is_right_defined = false;
+	//std::cout << median[1];
+
+	vector<vector<Point> > left_contours;
+	vector<Vec4i> left_hierarchy;
+	int left_contour_index = 0;
+
+	vector<vector<Point> > right_contours;
+	vector<Vec4i> right_hierarchy;
+	int right_contour_index = 0;
+	
+	std::cout << "Median: " << median[0] << endl;
+	std::cout << "Median: " << median[1] << endl;
+	std::cout << "Brightness: " << brightness[0] << endl;
+	std::cout << "Brightness: " << brightness[1] << endl;
+	std::cout << "Contrast: " << contrast[0] << endl;
+	std::cout << "Contrast: " << contrast[1] << endl;
+	
+	for (int k = 0; k <= 1; k++) {
+		Mat processed;
+		image.convertTo(processed, -1, contrast[k], brightness[k]);
+		cvtColor(processed, processed, CV_BGR2GRAY);
+		//imwrite("brightness_contrast.jpg", processed);
+		medianBlur(processed, processed, median[k]);
+		//imwrite("median.jpg", processed);
+		std::cout << "Median filter applied. Iteration: " << k << endl;
+		Mat gray;
+		Canny(processed, gray, 5, 70, 3);
+		cv::imwrite("Canny.jpg", gray);
+
+		/// Find contours   
+		vector<vector<Point> > contours;
+		vector<Vec4i> hierarchy;
+		RNG rng(12345);
+		findContours(gray, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
+		/// Draw contours
+		Mat drawing = Mat::zeros(gray.size(), CV_8UC3);
+
+
+		int largest_perimeter = 0;
+		int largest_contour_index = 0;
+		int second_largest_perimeter = 0;
+		int second_largest_contour_index = 0;
+		
+
+		for (int i = 0; i< contours.size(); i++) // iterate through each contour. 
+		{
+			double a = arcLength(contours[i], false);
+			double b = arcLength(contours[i], false);
+			if (a>largest_perimeter) {
+				second_largest_perimeter = largest_perimeter;
+				second_largest_contour_index = largest_contour_index;
+				largest_perimeter = a;
+				largest_contour_index = i;              //Store the index of largest contour
+
+			}
+			else if (a<largest_perimeter && a>second_largest_perimeter) {
+				second_largest_perimeter = a;
+				second_largest_contour_index = i;
+			}
+
+		}
+
+		largest_perimeter = arcLength(contours[largest_contour_index], false);
+		second_largest_perimeter = arcLength(contours[second_largest_contour_index], false);
+
+		cv::drawContours(drawing, contours, largest_contour_index, color, 1, 8, hierarchy, 0, Point());
+		if (second_largest_perimeter > largest_perimeter/2)
+			cv::drawContours(drawing, contours, second_largest_contour_index, color, 1, 8, hierarchy, 0, Point());
+
+		//imwrite("Result.jpg", drawing);
+		cvtColor(drawing, drawing, CV_BGR2GRAY);
+		threshold(drawing, drawing, 220, 255, THRESH_BINARY);
+		cv::imwrite("Iteration.jpg", drawing);
+
+		std::cout << "Contours detected. Iteration: " << k << endl;
+
+		bool two_good_lines = false;
+		int white_line_left = 0;
+		int white_line_right = 0;
+
+
+		for (int g = 1; g < drawing.cols; g++) {
+			
+			std::cout << "Second loop Iteration: " << g << endl;
+			std::cout << "Columns: " << drawing.cols << endl;
+			std::cout << "Rows: " << drawing.rows << endl;
+			Scalar a = drawing.at<uchar>(0, g);
+			std::cout << "Color of pixel: " << a << endl;
+
+			if ((drawing.at<uchar>(0, g) == 255) && (g <= (drawing.cols)/ 2)) {
+				white_line_left = white_line_left + 1;
+				std::cout << "White line top left detected. Iteration: " << k << endl;
+			}
+			else if ((drawing.at<uchar>(0, g) == 255) && (g > (drawing.cols) / 2)) {
+				white_line_right = white_line_right + 1;
+				std::cout << "White line top right detected. Iteration: " << k << endl;
+			}
+			if ((drawing.at<uchar>(drawing.rows, g) == 255) && (g <= (drawing.cols) / 2)) {
+				white_line_left = white_line_left + 1;
+				std::cout << "White line down left detected. Iteration: " << k << endl;
+			}
+			else if ((drawing.at<uchar>(drawing.rows, g) == 255) && (g > (drawing.cols) / 2)) {
+				white_line_right = white_line_right + 1;
+				std::cout << "White line down right detected. Iteration: " << k << endl;
+			}
+		}
+
+		if ((white_line_left == 2) && (white_line_right != 2) && (is_left_defined == false)) {
+			left_contours = contours;
+			left_hierarchy = hierarchy;
+			left_contour_index = largest_contour_index;
+			is_left_defined = true;
+			std::cout << "Saving parameters of left line. Iteration: " << k << endl;
+		}
+		else if ((white_line_right == 2) && (white_line_left != 2) && (is_right_defined == false)) {
+			right_contours = contours;
+			right_hierarchy = hierarchy;
+			right_contour_index = largest_contour_index;
+			is_right_defined = true;
+			std::cout << "Saving parameters for right line. Iteration: " << k << endl;
+		}
+		else if ((white_line_left == 2) && (white_line_right == 2)) {
+			left_contours = contours;
+			left_hierarchy = hierarchy;
+			left_contour_index = largest_contour_index;
+			is_left_defined = true;
+			right_contours = contours;
+			right_hierarchy = hierarchy;
+			right_contour_index = second_largest_contour_index;
+			is_right_defined = true;
+			two_good_lines = true;
+			break;
+			std::cout << "Both parameters stored. Iteration: " << k << endl;
+		}
+
+	}
+
+
+	std::cout << "Prepare drawing the two lines." << endl;
+	Mat final_image = Mat::zeros(image.size(), CV_8UC3);
+	cv::drawContours(final_image, left_contours, left_contour_index, color, 1, 8, left_hierarchy, 0, Point());
+	cv::drawContours(final_image, right_contours, right_contour_index, color, 1, 8, right_hierarchy, 0, Point());
+	//imwrite("canvas.jpg", final_image);
+	
+
+	//Populate pixels
+	bool line_started = false;
+	for (int i = 0; i < final_image.rows; i++) {
+	//for (int i = 0; i <= 9; i++) {
+	line_started = false;
+	for (int j = 0; j < final_image.cols; j++) {
+	//std::cout << "col number: " << i << endl;
+	//std::cout << "row number: " << j << endl;
+	if ((final_image.at<uchar>(i, j) == 255) && (line_started == false)) {
+	//std::cout << "First white pixel detected" << endl;
+	line_started = true;
+	}
+	else if ((final_image.at<uchar>(i, j) == 0) && (line_started == true)) {
+	//std::cout << "Drawing white line..." << endl;
+	final_image.at<cv::Vec3b>(i, j) = image.at<cv::Vec3b>(i, j);
+	}
+	else if ((final_image.at<uchar>(i, j) == 255) && (line_started == true)) {
+	//std::cout << "Second white pixel detected" << endl;
+	break;
+	}
+	}
+	}
+
+
+	
+	cv::imwrite("final.jpg", final_image);
+	cv::waitKey(0);
+	return 0;
+}

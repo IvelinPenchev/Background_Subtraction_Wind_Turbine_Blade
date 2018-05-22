@@ -1,0 +1,101 @@
+#include "stdafx.h"
+#include <iostream>
+#include "opencv2\highgui\highgui.hpp"
+#include "opencv\cv.h"
+#include "opencv2/core/core.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+
+
+using namespace cv;
+using namespace std;
+int main()
+{
+	Mat image;
+	image = imread("Small blade//5.JPG", 1);
+	imwrite("Original.jpg", image);
+	Mat imageContrastLow0_25;
+	image.convertTo(imageContrastLow0_25, -1, 1.6, -130);
+	cvtColor(imageContrastLow0_25, imageContrastLow0_25, CV_BGR2GRAY);
+	imwrite("brightness_contrast.jpg", imageContrastLow0_25);
+	medianBlur(imageContrastLow0_25, imageContrastLow0_25, 55);
+	imwrite("median.jpg", imageContrastLow0_25);
+
+	Mat gray;
+	Canny(imageContrastLow0_25, gray, 5, 70, 3);
+	imwrite("Canny.jpg", gray);
+
+	/// Find contours   
+	vector<vector<Point> > contours;
+	vector<Vec4i> hierarchy;
+	RNG rng(12345);
+	findContours(gray, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
+	/// Draw contours
+	Mat drawing = Mat::zeros(gray.size(), CV_8UC3);
+
+
+	int largest_perimeter = 0;
+	int largest_contour_index = 0;
+	int second_largest_perimeter = 0;
+	int second_largest_contour_index = 0;
+	Scalar color = Scalar(255, 255, 255);
+
+	for (int i = 0; i< contours.size(); i++) // iterate through each contour. 
+	{
+		double a = arcLength(contours[i], false);
+		double b = arcLength(contours[i], false);
+		if (a>largest_perimeter) {
+			second_largest_perimeter = largest_perimeter;
+			second_largest_contour_index = largest_contour_index;
+			largest_perimeter = a;
+			largest_contour_index = i;              //Store the index of largest contour
+
+		}
+		else if (a<largest_perimeter && a>second_largest_perimeter) {
+			second_largest_perimeter = a;
+			second_largest_contour_index = i;
+		}
+
+	}
+	//int a;
+	//std::cout << contours[second_largest_contour_index] << endl;
+	//std::cin >> a;
+
+	drawContours(drawing, contours, second_largest_contour_index, color, 1, 8, hierarchy, 0, Point());
+	drawContours(drawing, contours, largest_contour_index, color, 1, 8, hierarchy, 0, Point());
+	imwrite("Result.jpg", drawing);
+	cvtColor(drawing, drawing, CV_BGR2GRAY);
+	threshold(drawing, drawing, 220, 255, THRESH_BINARY);
+	
+	Mat final_image = Mat::zeros(image.size(), CV_8UC3);
+	//imwrite("canvas.jpg", final_image);
+	/*
+	
+	//Populate pixels
+	bool line_started = false;
+	for (int i = 0; i < drawing.rows; i++) {
+	//for (int i = 0; i <= 9; i++) {
+		line_started = false;
+		for (int j = 0; j < drawing.cols; j++) {
+			//std::cout << "col number: " << i << endl;
+			//std::cout << "row number: " << j << endl;
+			if ((drawing.at<uchar>(i, j) == 255) && (line_started == false)) {
+				//std::cout << "First white pixel detected" << endl;
+				line_started = true;
+			}
+			else if ((drawing.at<uchar>(i, j) == 0) && (line_started == true)) {
+				//std::cout << "Drawing white line..." << endl;
+				final_image.at<cv::Vec3b>(i, j) = image.at<cv::Vec3b>(i, j);
+			}
+			else if ((drawing.at<uchar>(i, j) == 255) && (line_started == true)) {
+				//std::cout << "Second white pixel detected" << endl;
+				break;
+			}
+		}
+	}
+	
+
+	*/
+	imwrite("final.jpg", final_image);
+	waitKey(0);
+	return 0;
+}
