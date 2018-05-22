@@ -7,7 +7,7 @@
 using namespace cv;
 
 int main(int argc, char const *argv[]){
-	const cv::String destination = "Small blade//6.JPG";
+	const cv::String destination = "Small blade//4.JPG";
 	BackgroundSubtractor subtractor;
 	subtractor.background_subtraction(destination);
 }

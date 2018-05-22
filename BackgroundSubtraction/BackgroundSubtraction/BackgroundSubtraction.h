@@ -25,9 +25,9 @@ private:
 	Mat edges_;
 
 	int iteration;
-	array<int, 8> brightness_{ -80, -80, 100, 50, -150, -170, 50, -150};
-	array<double, 8> contrast_{ 1.6, 1.6, 1.6, 1.8, 1.8, 1.4, 1.8, 1.8 };
-	array<int, 8> median_{ 101, 175, 101, 101, 101, 175, 175, 175 };
+	array<int, 10> brightness_{ 100, -80, 100, 100, 50, -150, -170, 50, -150, -80 };
+	array<double, 10> contrast_{1, 1.6, 1, 1.6, 1.8, 1.8, 1.4, 1.8, 1.8, 1.6 };
+	array<int, 10> median_{ 101, 101, 201, 101, 175, 101, 175, 101, 175, 175 };
 
 	int cannyLow_ = 5;
 	int cannyHigh_ = 70;

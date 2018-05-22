@@ -1,6 +1,8 @@
 ﻿  BackgroundSubtraction.cpp
-c:\users\ivo\documents\github\wind_turbine_blade_background_subtraction\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(69): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 c:\users\ivo\documents\github\wind_turbine_blade_background_subtraction\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(74): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\ivo\documents\github\wind_turbine_blade_background_subtraction\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(82): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\ivo\documents\github\wind_turbine_blade_background_subtraction\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(83): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\ivo\documents\github\wind_turbine_blade_background_subtraction\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(79): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\ivo\documents\github\wind_turbine_blade_background_subtraction\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(87): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\ivo\documents\github\wind_turbine_blade_background_subtraction\backgroundsubtraction\backgroundsubtraction\backgroundsubtraction.cpp(88): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  SubtractBackground.cpp
+  Generating Code...
   BackgroundSubtraction.vcxproj -> C:\Users\Ivo\Documents\GitHub\Wind_Turbine_Blade_Background_Subtraction\BackgroundSubtraction\x64\Debug\BackgroundSubtraction.exe
