@@ -1,3 +1,0 @@
-image 6: 1.4 -100 101 - right side
-image 3: 1.8, -150, 95 - right only
-image 3: 1.8, 50, 95 - left only
